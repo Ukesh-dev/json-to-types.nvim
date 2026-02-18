@@ -70,6 +70,8 @@ Install the plugin with your preferred package manager:
 - To create keymaps for the language you want, you can refer to the method provided above or use it directly in command mode as well:
 
 ```
+:ConvertJSONtoLang
+:ConvertJSONtoLangBuffer
 :ConvertJSONtoLang typescript
 :ConvertJSONtoLang javascript
 :ConvertJSONtoLang python
@@ -98,6 +100,7 @@ Install the plugin with your preferred package manager:
 :ConvertJSONtoLang typescript-effect-schema
 ```
 
+- `:ConvertJSONtoLang` and `:ConvertJSONtoLangBuffer` now support no arguments and will open a `vim.ui.select` picker for language selection.
 - This will create a new file with the name `types-{filename}.{extension}` in the same directory as the file you are editing with type definitions.
 - Similarly, you can use the `ConvertJSONtoLangBuffer` command to create a new buffer with type definitions so you can make your changes immediately.
 - Supported languages are listed above for your reference.

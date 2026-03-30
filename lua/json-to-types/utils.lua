@@ -57,8 +57,8 @@ M.execute_node_command = function(file_name, target_language)
   end)
 
   local types_command = "node --no-warnings "
-    .. vim.fn.stdpath("data")
     .. plugin.path
+    .. "/quicktype.js "
     .. target_language
     .. " "
     .. file_name

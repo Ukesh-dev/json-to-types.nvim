@@ -51,9 +51,14 @@ M.execute_node_command = function(file_name, target_language)
   --   .. file_name
   --   .. " > "
   --   .. types_output_file
+
+  local plugin = vim.iter(vim.pack.get()):find(function(x)
+    return x.spec.name == "json-to-types.nvim"
+  end)
+
   local types_command = "node --no-warnings "
     .. vim.fn.stdpath("data")
-    .. "/site/pack/core/opt/json-to-types.nvim/quicktype.js "
+    .. plugin.path
     .. target_language
     .. " "
     .. file_name
